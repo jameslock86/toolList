@@ -66,7 +66,18 @@ footer {
     height: auto;
   }
 }
+.things-header-body {
+    color: white;
+    font-size: 29px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
 
+.things-text-body {
+    color: #313638;
+    font-size: 24px;
+    font-weight: lighter;
+}
 
 .images{
     background-color: green;
