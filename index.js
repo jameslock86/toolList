@@ -127,3 +127,29 @@ console.log("b defined? " + (typeof b !== 'undefined'));
 // a runtime error of ReferenceError: b is not defined, thereby avoiding any headfakes / bugs that 
 // might othewise result. (Yet another prime example of why you should use use strict as a matter of
 //      course in your code!)
+
+var fruits = ['Apple', 'Banana'];
+
+console.log(fruits.length);
+// 2
+
+var first = fruits[0];
+// Apple
+
+var last = fruits[fruits.length - 1];
+// Banana
+
+
+// using forEach function
+fruits.forEach(function (item, index, array) {
+    console.log(item, index);
+});
+// Apple 0
+// Banana 1
+
+let color = ['red', 'blue','green'];
+
+color.forEach(function(item, index, array){
+    console.log(item);
+});
+// red, blue, green
