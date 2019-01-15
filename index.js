@@ -153,3 +153,21 @@ color.forEach(function(item, index, array){
     console.log(item);
 });
 // red, blue, green
+
+let newLength = fruits.push('Orange');
+// ["Apple", "Banana", "Orange"]
+
+// removes the last item in the array
+
+var last = fruits.pop();
+//["Apple", "Banana"];
+
+// removes the first item in the array
+
+var first = fruits.shift(); // remove Apple from the front
+// ["Banana"];
+
+// addes a item to the front of the array
+
+var newLength = fruits.unshift('Strawberry') // add to the front
+// ["Strawberry", "Banana"
