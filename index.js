@@ -171,3 +171,17 @@ var first = fruits.shift(); // remove Apple from the front
 
 var newLength = fruits.unshift('Strawberry') // add to the front
 // ["Strawberry", "Banana"
+
+var myObject = {
+    foo: "bar",
+    func: function () {
+        var self = this;
+        console.log("outer func:  this.foo = " + this.foo);
+        console.log("outer func:  self.foo = " + self.foo);
+        (function () {
+            console.log("inner func:  this.foo = " + this.foo);
+            console.log("inner func:  self.foo = " + self.foo);
+        }());
+    }
+};
+myObject.func();
