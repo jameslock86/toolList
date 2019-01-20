@@ -185,3 +185,31 @@ var myObject = {
     }
 };
 myObject.func();
+
+
+
+let total = 0, count = 1;
+while (count <= 10) {
+    total += count;
+    count += 1;
+}
+console.log(total);
+
+
+function repeatLog(n) {
+    for (let i = 0; i < n; i++) {
+        console.log(i);
+    }
+}
+
+
+function repeat(n, action) {
+    for (let i = 0; i < n; i++) {
+        action(i);
+    }
+}
+
+repeat(3, console.log);
+// → 0
+// → 1
+// → 2
