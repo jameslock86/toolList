@@ -213,3 +213,23 @@ repeat(3, console.log);
 // → 0
 // → 1
 // → 2
+
+var character = {
+       name: "Donna",
+       hair: "red"
+};
+​
+character.hair = "blonde";
+​
+character;
+// OUTPUT
+// {
+//        "name": "Donna",
+//        "hair": "blonde"
+// }
+
+<button id="clicker">So Clickable</button>
+
+document.getElementById("clicker").addEventListener("click", function() {
+  alert("you triggered " + this.id);
+});
