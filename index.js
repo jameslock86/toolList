@@ -233,3 +233,16 @@ character;
 document.getElementById("clicker").addEventListener("click", function() {
   alert("you triggered " + this.id);
 });
+
+
+
+
+//
+// add up the numbers in an array
+//
+
+function simpleArraySum(ar) {
+    return ar.reduce((a, b) => a + b);
+
+
+}
