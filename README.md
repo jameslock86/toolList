@@ -36,3 +36,10 @@ function letTest() {
   }
   console.log(x);  // 1
 }
+
+#Explain briefly about classes, modules and proxies?
+
+Answer:
+Classes are based on the OOP style that is object-oriented programming. The class declaration makes the patterns easier to use. It supports inheritance, base class access, static methods, and constructors.
+Modules: it defines the patterns from popular javascript module loaders. It supports for exporting or importing the values from or to modules without the global namespace. It supports marking the value as the default exported value and max-min values.
+Proxies: It enables object creation with a wide variety of behaviors available to host objects. It can be used for logging, profiling, etc.
