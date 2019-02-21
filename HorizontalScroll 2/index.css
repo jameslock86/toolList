@@ -1,0 +1,47 @@
+.top {
+    width: 100vw;
+    height: 50vh;
+    background-color: red;
+}
+
+.second {
+    width: 100vw;
+    height: 90vh;
+    background-color: blue;
+}
+
+/* .third {
+    width: 100vw;
+    height: 90vh;
+    background-color: purple; 
+}*/
+
+.img {
+    width: 4700px;
+    height: auto;
+}
+
+.catch {
+    height: 1px;
+}
+
+.drop {
+    width: 100vw;
+    height: 9500px;
+    background-color: pink;
+}
+
+.picture {
+    position: relative;
+    right: 2640px;
+    left: 0;
+    /* padding-top:100px; */
+    height: 300px;
+}
+
+.imageWrapper {
+    position: sticky;
+    height: 500px;
+    right: 0;
+    top: 50px;
+}

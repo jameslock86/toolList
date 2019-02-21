@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Event Emitter</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        // Add your implementation here, and initialize eventEmitter with an actual value;
+
+        class eventEmitter {
+            constructor() {
+                this.event = {};
+            }
+            //ON: turn it on
+            on(name, f) {
+                if (!this.event.hasOwnProperty(name)) {
+                    this.event[name] = {
+                        click: f,
+                        on: true
+                    }
+                } else {
+                    this.event[name].on = true;
+                }
+            }
+            off(name, f) {
+                if (!this.event.hasOwnProperty(name)) {
+                    this.event[name] = {
+                        click: f,
+                        on: false
+                    }
+                    else {
+                        this.event[name].on = false;
+                    }
+
+                }
+            }
+
+            //Check if name exist
+            //if it exist
+            //
+
+            emit(name, time) {
+                if (!this.event.hasOwnProperty(name)) {
+
+                }
+            }
+
+
+            //OFF: turn it off
+            //EMIT: use function
+            //ONCE: use function given (does not matter if it is in event or not)
+
+        }
+
+
+        function responseToEvent(msg) {
+
+            console.log(msg);
+        }
+
+        function secondfunction(msg) {
+            console.log(msg + 2);
+        }
+
+        eventEmitter.on('pramp', responseToEvent);
+        eventEmitter.on('prampimposter', secondfunction);
+        eventEmitter.once('pramp', function (msg) {
+            console.log(msg + ' just once!');
+        });
+        eventEmitter.emit('pramp', '1st');
+        eventEmitter.emit('pramp', '2nd');
+        eventEmitter.off('pramp', responseToEvent);
+        eventEmitter.emit('pramp', '3rd');
+        eventEmitter.emit('pramp', '1st');
+        eventEmitter.on('pramp', responseToEvent);
+    </script>
+</body>
+
+</html>

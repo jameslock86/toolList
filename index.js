@@ -1,3 +1,14 @@
+//
+//fizz buzz
+
+
+for (var i=1; i < 101; i++){
+    if (i % 15 == 0) console.log("FizzBuzz");
+    else if (i % 3 == 0) console.log("Fizz");
+    else if (i % 5 == 0) console.log("Buzz");
+    else console.log(i);
+}
+
 
 function count(str){
     str = str.toLowerCase();
@@ -233,3 +244,84 @@ character;
 document.getElementById("clicker").addEventListener("click", function() {
   alert("you triggered " + this.id);
 });
+
+
+
+
+//
+// add up the numbers in an array
+//
+
+function simpleArraySum(ar) {
+    return ar.reduce((a, b) => a + b);
+
+
+}
+
+
+
+class User {
+
+  constructor(name) {
+    this.name = name;
+  }
+
+  sayHi() {
+    alert(this.name);
+  }
+
+}
+
+let user = new User("John");
+user.sayHi();
+
+// It’s easy to see that the two examples are alike. Just please note that methods in a class do not have a comma between them. Novice developers sometimes forget it and put a comma between class methods, and things don’t work. That’s not a literal object, but a class syntax.
+
+// So, what exactly does class do? We may think that it defines a new language-level entity, but that would be wrong.
+
+// The class User {...} here actually does two things:
+
+// Declares a variable User that references the function named "constructor".
+// Puts methods listed in the definition into User.prototype. Here, it includes sayHi and the constructor.
+
+
+
+
+
+// Write functions that do the following: 
+// even // [1,2,3,4,5].even() should return [2,4]
+// odd // [1,2,3,4,5].odd() should return [1,3,5]
+// under // [1,2,3,4,5].under(4) should return [1,2,3]
+// over // [1,2,3,4,5].over(4) should return [5]
+// inRange // [1,2,3,4,5].inRange(1,3) should return [1,2,3]
+
+// They should also work when used together, for example:
+
+// [1,2,18,19,20,21,22,30,40,50,100].even().inRange(18,30) // should return [18, 20, 22, 30]
+
+// And finally the filters should only accept integer values from an array, for example:
+
+// ["a", 1, "b", 300, "x", "q", 63, 122, 181, "z", 0.83, 0.11].even() // should return [300, 122]
+Array.prototype.isInt = function() {
+    return this.filter(function(n) { return (typeof(n)==='number') && (n% 1 === 0) });
+    }
+    
+    Array.prototype.even = function() {
+    return this.isInt().filter(function(n) { return n%2===0 });
+    }
+    
+    Array.prototype.odd = function() {
+    return this.isInt().filter(function(n) { return n%2!== 0 });
+    }
+    
+    Array.prototype.under = function(x) {
+    return this.isInt().filter(function(n) { return n < x });
+    }
+    
+    Array.prototype.over = function(x) {
+    return this.isInt().filter(function(n) { return n > x });
+    }
+    
+    Array.prototype.inRange = function(min, max) {
+    return this.isInt().filter(function(n) { return n >= min && n <= max });
+    }
