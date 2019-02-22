@@ -325,3 +325,24 @@ Array.prototype.isInt = function() {
     Array.prototype.inRange = function(min, max) {
     return this.isInt().filter(function(n) { return n >= min && n <= max });
     }
+
+
+
+    function getTotalByDomain(count){
+        let arr = [];
+
+        for (i=0; i<cont.length; i++){
+            let dn = count.split(',');
+            let x = dn.split('.');
+            for (k = 1; k<x.lenght; k++){
+                let dn1 = dn[1].split('.',1);
+                for(j=0; j<arr.lenght; j++){
+                    if(arr[j].domain){
+                    arr[j].count +=dn[0];
+                    } else {
+                        arr.push(dn1[1])
+                    };
+                }   
+            }
+        };
+    };
